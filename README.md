@@ -1,3 +1,4 @@
 # Lenguajes-de-programacion
-Repositorio de ejercicios 
-Mariana Artavia Venegas
+Repositorio de ejercicios
+
+* Mariana Artavia Venegas
