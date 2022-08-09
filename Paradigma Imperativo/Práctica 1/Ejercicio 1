@@ -1,0 +1,21 @@
+package main
+
+import "strings"
+
+func analizarTexto(texto string) (int, int, int) {
+	char, pal, lin := 0, 0, 1
+	lin += strings.Count(texto, "\n")
+	e := strings.Count(texto, " ") + lin
+	char = len(texto) - lin
+	pal = e
+	return char, pal, lin
+}
+
+func main() {
+
+	texto := "Hola, como estas?\n" + "bien y usted?\n" + "bien."
+	println("\nAnalizando el texto: \n" + texto)
+	println("------------------------------------")
+	char, pal, lin := analizarTexto(texto)
+	println("Cantidad de caracteres: ", char, "\nCantidad de palabras: ", pal, "\nCantidad de lineas: ", lin)
+}
