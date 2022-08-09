@@ -5,7 +5,7 @@ import "strings"
 func analizarTexto(texto string) (int, int, int) {
 	char, pal, lin := 0, 0, 1
 	lin += strings.Count(texto, "\n")
-	e := strings.Count(texto, " ") + lin
+	e := strings.Count(texto, " ") + lin //Contador de espacios
 	char = len(texto) - lin
 	pal = e
 	return char, pal, lin
