@@ -19,3 +19,14 @@ func main() {
 	char, pal, lin := analizarTexto(texto)
 	println("Cantidad de caracteres: ", char, "\nCantidad de palabras: ", pal, "\nCantidad de lineas: ", lin)
 }
+
+Resultado al correr el código:
+
+Analizando el texto:
+Hola, como estas?
+bien y usted?
+bien.
+------------------------------------
+Cantidad de caracteres:  34 
+Cantidad de palabras:  7 
+Cantidad de lineas:  3
