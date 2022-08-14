@@ -1,0 +1,78 @@
+package main
+
+import (
+	"fmt"
+)
+
+type calzado struct {
+	marca  string
+	talla  int
+	precio int
+	stock  int
+}
+
+var lista_calzado_slice []calzado
+
+func crearCalzado(m string, t int, p int, s int) calzado {
+	c := calzado{marca: m, talla: t, precio: p, stock: s}
+	return c
+}
+
+func agregarCalzado(c calzado) {
+	if c.talla >= 34 && c.talla <= 44 {
+		lista_calzado_slice = append(lista_calzado_slice, c)
+	} else {
+		println("La talla del zapato debe estar entre 34 y 44")
+	}
+}
+
+func llenarInventario() {
+	agregarCalzado(crearCalzado("Nike", 35, 50000, 5))
+	agregarCalzado(crearCalzado("Adidas", 40, 60000, 3))
+	agregarCalzado(crearCalzado("Puma", 38, 45000, 2))
+	agregarCalzado(crearCalzado("Vans", 39, 40000, 3))
+	agregarCalzado(crearCalzado("Pasos", 42, 20000, 1))
+	agregarCalzado(crearCalzado("Converse", 40, 25000, 3))
+	agregarCalzado(crearCalzado("Coral", 39, 19000, 2))
+	agregarCalzado(crearCalzado("Soda", 40, 18000, 6))
+	agregarCalzado(crearCalzado("Koala", 34, 10000, 4))
+	agregarCalzado(crearCalzado("Reebok", 37, 50000, 2))
+	fmt.Println(lista_calzado_slice)
+}
+
+func buscarCalzado(c string) int {
+	var indice = -1
+	for i, zapato := range lista_calzado_slice {
+		if zapato.marca == c {
+			indice = i
+		}
+	}
+	return indice
+}
+
+func venderCalzado(n string) {
+	var z = buscarCalzado(n)
+	if z != -1 && lista_calzado_slice[z].stock > 0 {
+		lista_calzado_slice[z].stock--
+		println("Zapatos vendidos con exito")
+		fmt.Println(lista_calzado_slice)
+	} else {
+		println("No se puede vender el zapato por que no hay stock")
+	}
+}
+
+func main() {
+	llenarInventario()
+	venderCalzado("Puma")
+	venderCalzado("Puma")
+	venderCalzado("Puma")
+}
+
+Resultado al correr el código:
+
+[{Nike 35 50000 5} {Adidas 40 60000 3} {Puma 38 45000 2} {Vans 39 40000 3} {Pasos 42 20000 1} {Converse 40 25000 3} {Coral 39 19000 2} {Soda 40 18000 6} {Koala 34 10000 4} {Reebok 37 50000 2}]
+Zapatos vendidos con exito
+[{Nike 35 50000 5} {Adidas 40 60000 3} {Puma 38 45000 1} {Vans 39 40000 3} {Pasos 42 20000 1} {Converse 40 25000 3} {Coral 39 19000 2} {Soda 40 18000 6} {Koala 34 10000 4} {Reebok 37 50000 2}]
+Zapatos vendidos con exito
+[{Nike 35 50000 5} {Adidas 40 60000 3} {Puma 38 45000 0} {Vans 39 40000 3} {Pasos 42 20000 1} {Converse 40 25000 3} {Coral 39 19000 2} {Soda 40 18000 6} {Koala 34 10000 4} {Reebok 37 50000 2}]
+No se puede vender el zapato por que no hay stock
