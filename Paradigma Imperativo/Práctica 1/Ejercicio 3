@@ -1,0 +1,63 @@
+package main
+
+import (
+	"fmt"
+	"strings"
+)
+
+var array1 [10]string
+var array2 [10]string
+
+func rotarSecuencia(array *[10]string, r int, d int) [10]string {
+	println("Cantidad de rotaciones: ", r)
+	println("Direccion: ", d)
+	var arrayBK = *array
+	for i := 0; i < r; i++ {
+		for j := 0; j < len(array); j++ {
+			if d == 0 {
+				var ultimoElemento = array[0]
+				if j != 0 {
+					array2[j-1] = array[j]
+				} else {
+					array2[9] = ultimoElemento
+				}
+			} else {
+				var ultimoElemento = array[9]
+				if j != 9 {
+					array2[j+1] = array[j]
+				} else {
+					array2[0] = ultimoElemento
+				}
+			}
+		}
+		*array = array2
+	}
+	*array = arrayBK
+	return array2
+}
+
+func main() {
+	array1 := [10]string{"a", "b", "c", "d", "e", "f", "g", "h", "i", "j"}
+	println("Dirección => Izq 0 - Der 1")
+	println("Arreglo original: ")
+	fmt.Println(array1)
+	println("--------------Arreglo rotado--------------")
+	fmt.Println(rotarSecuencia(&array1, 3, 1))
+	println("--------------Arreglo rotado--------------")
+	fmt.Println(rotarSecuencia(&array1, 3, 0))
+}
+
+Resultado:
+Dirección => Izq 0 - Der 1
+Arreglo original: 
+[a b c d e f g h i j]
+
+--------------Arreglo rotado--------------
+Cantidad de rotaciones:  3
+Direccion:  1
+[h i j a b c d e f g]
+
+--------------Arreglo rotado--------------
+Cantidad de rotaciones:  3
+Direccion:  0
+[d e f g h i j a b c]
