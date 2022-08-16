@@ -89,7 +89,7 @@ func main() {
 	lProductos.venderProducto("azucar", 15)
 	lProductos.venderProducto("café", 6)
 	//lProductos.venderProducto("leche", 10)
-------------------------------------------------------------------------CÓDIGO DEL EJECICIO----------------------------------------------------------------------------
+------------------------------------------------------------------------CÓDIGO DEL EJERCICIO----------------------------------------------------------------------------
 	fmt.Println("Lista de productos sin ordenar: ", lProductos)
 	sort.SliceStable(lProductos, func(i, j int) bool {      //Usando la función de la librería sort, para ordenar por precio de mayor a menor
 		return lProductos[i].precio > lProductos[j].precio
