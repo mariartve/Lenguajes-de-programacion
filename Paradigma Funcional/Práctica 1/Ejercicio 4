@@ -1,0 +1,12 @@
+module Main (main) where
+
+import Lib
+import Data.List
+
+aplanar' l = sort(map head l ++ concat (map tail l ))
+
+main :: IO ()
+main = do
+    print(aplanar' [[1, 2], [3], [4, 5], [6, 7]])
+ 
+--Resultado: [1,2,3,4,5,6,7]
