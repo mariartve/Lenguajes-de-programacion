@@ -1,0 +1,15 @@
+/*1)	Haciendo uso de la función filter, implemente una función que a partir de una lista de cadenas de parámetro, filtre aquellas que contengan una subcadena
+que el usuario indique en otro argumento. */
+
+module Main (main) where
+
+import Lib
+import Data.List
+
+sub_cadenas sub cadena = filter(isInfixOf sub) cadena
+
+main :: IO ()
+main = do
+    print(sub_cadenas "la" ["la casa", "el perro", "pintando la cerca"])
+
+--Resultado: ["la casa","pintando la cerca"]
