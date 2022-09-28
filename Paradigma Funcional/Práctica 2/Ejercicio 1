@@ -18,7 +18,7 @@ calcular_factura l = reduce(map monto l)
 
 impuesto p = (fromIntegral(precio p) * 0.13)
 minimos minimo prod = ((precio prod) > minimo) 
-calcular_impuesto l r = reduce(map impuesto (filter (minimos r) l))
+calcular_impuesto l r = round(reduce(map impuesto (filter (minimos r) l)))
 
 main :: IO ()
 main = do 
@@ -31,3 +31,9 @@ main = do
     print(calcular_factura factura)
     print("Impuesto de la factura: ")
     print(calcular_impuesto factura 20000)
+
+--Resultado:
+"Monto total de la factura: "
+182200
+"Impuesto de la factura: "
+19396
