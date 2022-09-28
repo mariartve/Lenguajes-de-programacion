@@ -1,3 +1,4 @@
+/* 4) Implemente el equivalente para la función anterior, pero utilizando la función map para dicho fin. */
 module Main (main) where
 
 import Lib
