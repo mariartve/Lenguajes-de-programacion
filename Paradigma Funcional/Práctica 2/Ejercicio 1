@@ -1,0 +1,33 @@
+/*1)	Migrar el ejercicio realizado en Go sobre facturas con listas de productos haciendo énfasis en la implementación de las funciones para calcular el monto a pagar
+por la factura completa y el monto a pagar por concepto del 13% de impuesto de venta para aquellos productos que deban pagarlo según criterio de selección.*/
+
+module Main (main) where
+
+import Lib
+
+data Producto = Producto { nombre :: String
+                    , descripcion :: String
+                    , precio :: Int
+                     } deriving Show
+
+reduce [ ] = 0
+reduce (x:xs) = x + reduce(xs)    
+
+monto p = precio p 
+calcular_factura l = reduce(map monto l)
+
+impuesto p = (fromIntegral(precio p) * 0.13)
+minimos minimo prod = ((precio prod) > minimo) 
+calcular_impuesto l r = reduce(map impuesto (filter (minimos r) l))
+
+main :: IO ()
+main = do 
+    let factura =[ (Producto "tarjeta madre" "Asus" 54200),
+                   (Producto "mouse" "alámbrico" 15000),
+                   (Producto "teclado" "gamer con luces" 30000),
+                   (Producto "memoria ssd" "2 gb" 65000),
+                   (Producto "cable video" "display port 1m" 18000)]
+    print("Monto total de la factura: ")
+    print(calcular_factura factura)
+    print("Impuesto de la factura: ")
+    print(calcular_impuesto factura 20000)
