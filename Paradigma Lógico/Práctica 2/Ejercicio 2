@@ -1,0 +1,13 @@
+miembro(N,[N|_]).
+miembro(N,[_|Tail]) :- miembro(N,Tail),!.
+
+subconjunto([],_).
+subconjunto([H|T],X):- miembro(H,X), subconjunto(T,X),!.
+
+RESULTADO:
+?- subconjunto([1,2,3],[1,2,3,4,5]).
+true.
+?- subconjunto([],[1,2,3,4,5]).
+true.
+̀?- subconjunto([1,2,6],[1,2,3,4,5]).
+false.
