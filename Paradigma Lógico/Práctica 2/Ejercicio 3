@@ -1,0 +1,5 @@
+aplanar([],[]).
+aplanar([H|T],L):-aplanar(T,Sl),append(H,Sl,L).
+
+RESULTADO:
+?- aplanar([[1, 2], [3], [4, 5], [6, 7]],L).L = [1, 2, 3, 4, 5, 6, 7].
