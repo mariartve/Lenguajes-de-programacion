@@ -1,0 +1,107 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<form xmlns="http://www.intellij.com/uidesigner/form/" version="1" bind-to-class="T1Frame">
+  <grid id="27dc6" binding="panel1" layout-manager="FlowLayout" hgap="5" vgap="5" flow-align="1">
+    <constraints>
+      <xy x="59" y="16" width="891" height="364"/>
+    </constraints>
+    <properties/>
+    <border type="none"/>
+    <children>
+      <component id="ac445" class="javax.swing.JLabel" binding="JLabel1">
+        <constraints/>
+        <properties>
+          <font name="Dialog" size="24" style="1"/>
+          <text value="Contacto Tipo 1"/>
+        </properties>
+      </component>
+      <component id="74545" class="javax.swing.JLabel" binding="JLabel2">
+        <constraints/>
+        <properties>
+          <horizontalAlignment value="10"/>
+          <text value="Nombre"/>
+        </properties>
+      </component>
+      <component id="67639" class="javax.swing.JTextField" binding="nombreTxt">
+        <constraints/>
+        <properties>
+          <columns value="30"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="419f9" class="javax.swing.JLabel" binding="JLabel3">
+        <constraints/>
+        <properties>
+          <text value="Edad"/>
+        </properties>
+      </component>
+      <component id="1142" class="javax.swing.JTextField" binding="edadTxt">
+        <constraints/>
+        <properties>
+          <columns value="30"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="2c2fb" class="javax.swing.JLabel" binding="JLabel4">
+        <constraints/>
+        <properties>
+          <text value="Genero"/>
+        </properties>
+      </component>
+      <component id="e0f09" class="javax.swing.JTextField" binding="generoTxt">
+        <constraints/>
+        <properties>
+          <columns value="30"/>
+        </properties>
+      </component>
+      <component id="6a511" class="javax.swing.JLabel" binding="JLabel5">
+        <constraints/>
+        <properties>
+          <text value="Telefono"/>
+        </properties>
+      </component>
+      <component id="fe2b1" class="javax.swing.JTextField" binding="telefonoTxt">
+        <constraints/>
+        <properties>
+          <columns value="30"/>
+          <text value=""/>
+        </properties>
+      </component>
+      <component id="cfaaa" class="javax.swing.JLabel" binding="JLabel6">
+        <constraints/>
+        <properties>
+          <text value="Dirección"/>
+        </properties>
+      </component>
+      <component id="a216e" class="javax.swing.JTextField" binding="direccionTxt">
+        <constraints/>
+        <properties>
+          <columns value="30"/>
+        </properties>
+      </component>
+      <component id="1f5d5" class="javax.swing.JLabel" binding="JLabel7">
+        <constraints/>
+        <properties>
+          <text value="Correo"/>
+        </properties>
+      </component>
+      <component id="e44a6" class="javax.swing.JTextField" binding="correoTxt">
+        <constraints/>
+        <properties>
+          <columns value="30"/>
+        </properties>
+      </component>
+      <component id="8c241" class="javax.swing.JLabel" binding="Jlabel8">
+        <constraints/>
+        <properties>
+          <text value="Empresa"/>
+        </properties>
+      </component>
+      <component id="1eac9" class="javax.swing.JTextField" binding="empresaTxt">
+        <constraints/>
+        <properties>
+          <columns value="30"/>
+        </properties>
+      </component>
+    </children>
+  </grid>
+</form>
