@@ -58,7 +58,7 @@ public class Main {
         Prestamo registrado con éxito
         Prestamo registrado con éxito
 
-        ***IMPRIMENDO LIBROS***
+        ***IMPRIMIENDO LIBROS***
         LIBRO : código = 1, título = 'Don Quijote de la Mancha', autor = 'Miguel de Cervantes', disponible = 'false', localización = 'Prestado al socio 1'
         LIBRO : código = 2, título = 'El principito', autor = 'Antoine de Saint-Exupéry', disponible = 'false', localización = 'Prestado al socio 1'
         LIBRO : código = 3, título = 'Las aventuras de Alicia en el país de las maravillas', autor = 'Lewis Carroll', disponible = 'false', localización = 'Prestado al socio 1'
@@ -70,7 +70,7 @@ public class Main {
         LIBRO : código = 9, título = 'Lo raro es vivir', autor = 'Carmen Martín Gaite', disponible = 'true', localización = 'Pasillo 3'
         LIBRO : código = 10, título = 'Orgullo y prejuicio', autor = 'Jane Austen', disponible = 'false', localización = 'Prestado al socio 3'
 
-        ***IMPRIMENDO SOCIOS***
+        ***IMPRIMIENDO SOCIOS***
         SOCIO : número de socio = 1, nombre = 'Juan Carlos Quesada', dirección = '500 norte del hospital', cantidad de prestamos = '4'
         SOCIO : número de socio = 2, nombre = 'Ana Raquel Arias', dirección = '150 sur de la plaza', cantidad de prestamos = '2'
         SOCIO : número de socio = 3, nombre = 'Julian Vargas', dirección = '400 este del parque', cantidad de prestamos = '1'
