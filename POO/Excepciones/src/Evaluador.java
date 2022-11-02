@@ -67,10 +67,7 @@ public class Evaluador {
                 n1 = lista.get(i);
                 operador = lista.get(i+1);
                 n2 = lista.get(i+2);
-                if(n1.getClass().toString().equals("class Op")){
-                    throw new Excepcion("Los elementos de la expresión no están ordenados en infijo");
-                }
-                else if((n1.getClass().toString().equals("class Num")) && (operador.getClass().toString().equals("class Op")) && (n2.getClass().toString().equals("class Num"))){
+                if((n1.getClass().toString().equals("class Num")) && (operador.getClass().toString().equals("class Op")) && (n2.getClass().toString().equals("class Num"))){
                     num1 = (Num) n1;
                     num2 = (Num) n2;
                     op = (Op) operador;
