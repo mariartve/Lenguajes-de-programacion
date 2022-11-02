@@ -48,9 +48,7 @@ class Evaluador:
                 n1 = lista[i]
                 operador = lista[i+1]
                 n2 = lista[i+2]
-                if type(n1).__name__ == "Op":
-                    raise Excepcion("Los elementos de la expresión no están ordenados en infijo")
-                elif (type(n1).__name__ == "Num") and (type(n2).__name__ == "Num") and (type(operador).__name__ == "Op") :
+                if (type(n1).__name__ == "Num") and (type(n2).__name__ == "Num") and (type(operador).__name__ == "Op") :
                     result.setNum(self.operar(n1.getNum(),n2.getNum(),operador.getOp()))
                     lista.insert(0,result)
                     del lista[1:4]
